@@ -12,3 +12,5 @@ An executable that makes all patches for these exploits accessible is included.
 
 Fixing this can easily be done by hooking or patching `UI_ReplaceDirective` to perform a boundary check on the source string.
 If it contains `[{` and at any point the length of the string following those characters exceeds 256, it should exit prematurely.
+
+![UI_ReplaceDirective](https://github.com/Peribunt/COD-RCE-Mitigations/blob/main/iw4mp/Resource/UI_ReplaceDirectiveProt.png)
