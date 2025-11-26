@@ -8,7 +8,7 @@ The MemberJoin RCE makes used of a vulnerable `MSG_ReadData` call on a stack all
 ![MemberJoin Vulnerability](https://github.com/Peribunt/COD-RCE-Mitigations/blob/main/iw5mp/Resource/MemberJoinVuln.png)
 
 ### How to fix
-Fixing this is quite simple, simply hook a point where the length of the vulnerable `MSG_ReadData` is accessible, and perform a boundary check.
+Fixing this is quite simple, simply hook or patch a point where the length of the vulnerable `MSG_ReadData` is accessible, and perform a boundary check.
 In this example I am hooking MSG_ReadData itself and checking if the return address matches up with the return address within `PartyAtomicHost_HandleMemberJoin`
 
 ![MemberJoin Fix](https://github.com/Peribunt/COD-RCE-Mitigations/blob/main/iw5mp/Resource/MemberJoinProt.png)
